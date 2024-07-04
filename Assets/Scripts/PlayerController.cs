@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxcollider;
     private Vector3 localPlayerScale;
     private bool isRunning;
+    const string enemyTag = "Enemy";
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +79,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Death");
             // die animation / sound effect
             SceneManager.LoadScene(2);
+        }
+
+        if (collider.gameObject.tag == enemyTag)
+        {
+            Debug.Log("Hit!");
         }
     }
 

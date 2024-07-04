@@ -14,6 +14,12 @@ public class CameraController : MonoBehaviour
 
     private float lookAhead;
 
+
+    void Start()
+    {
+        lookAhead = transform.position.y;
+    }
+
     // Update is called once per frame
     void Update()
     {
